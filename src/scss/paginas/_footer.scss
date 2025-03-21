@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.footer{
+    margin-top: 3rem;
+
+    background-image: linear-gradient(to right, rgba(v.$negro, .3), rgba(v.$negro, .1)), 
+    image-set(
+        url(../img/footer.avif) 1x,
+        url(../img/footer.webp) 1x,
+        url(../img/footer.jpg) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &_grid{
+        @include m.contenedor;
+        display: flex;
+        flex-direction: column-reverse;
+        
+        @include m.tablet{
+            @include m.grid(2, 3rem)
+        }
+    }
+
+    &_interes{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        
+
+        @include m.tablet{
+            text-align: left;
+        }
+
+        &-enlace{
+            color: v.$blanco;
+            font-size: 1.4rem;
+        }
+    }
+
+    &_copy{
+        text-align: center;
+        margin: 2rem 0;
+        color: v.$blanco;
+    }
+}
+
+.menu-redes{
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+    @include m.menu_social(v.$blanco, 2rem);
+
+    @include m.tablet{
+        justify-content: flex-end;
+    }
+}

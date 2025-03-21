@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.header{
+    padding: 1rem 3rem;
+    background-image: linear-gradient(to right, rgba(v.$negro, .3), rgba(v.$negro, .1)), 
+    image-set(
+        url(../img/header.avif) 1x,
+        url(../img/header.webp) 1x,
+        url(../img/header.jpg) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+    &_contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0 2rem 0;
+
+        @include m.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    &_heading{
+        @include m.texto_fluido(2rem, 5rem);
+        margin-bottom: 3rem;
+        color: v.$blanco;
+        @include m.tablet{
+            margin: 0;
+        }
+    }
+
+    &_navegacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        @include m.tablet{
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+
+    &_enlace{
+        @include m.enlace(v.$blanco, v.$blanco);
+    }
+
+    &_submit{
+        inset: all;
+        @include m.enlace(v.$blanco, v.$blanco);
+    }
+
+}

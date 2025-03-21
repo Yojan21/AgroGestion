@@ -1,0 +1,31 @@
+/** Media Queries **/
+.nosotros {
+  width: min(95%, 80rem);
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .nosotros {
+    width: min(95%, 140rem);
+    margin: 0 auto;
+  }
+}
+.nosotros_grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .nosotros_grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: justify;
+    align-items: center;
+  }
+}
+.nosotros_texto {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=nosotros.css.map */

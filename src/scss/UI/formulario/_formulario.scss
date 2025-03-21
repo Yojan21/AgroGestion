@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+
+    &_fieldset{
+        border: none;
+        margin-top: 1rem;
+        padding: 0;
+    }
+    &_legend{
+        color: v.$gris;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    &_campo{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;;
+    }
+    &_label{
+        display: block;
+        font-size: 1.8rem;
+        color: rgba(v.$negro, .8);
+    }
+    &_input,
+    &_select{
+        padding: 1rem;
+        border: 1px solid color.adjust(v.$gris-claro, $lightness: -20%);
+        border-radius: .5rem;
+        width: 95%;
+        &:hover{
+            border: 2px solid v.$azul;
+        }
+    }
+    &_texto{
+        margin-top: 3rem;
+    }
+    &_submit{
+        @include m.boton(v.$azul, v.$blanco);
+        width: 100%;
+        align-self: flex-start;
+
+        @include m.telefono{
+            width: auto;
+        }
+        &-registrar,
+        &-full{
+            width: 100%;
+        }
+    }
+}
