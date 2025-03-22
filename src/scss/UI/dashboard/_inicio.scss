@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    gap: 2rem;
+
+    @include m.tablet{
+        flex-direction: row;
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    &_sidebar{
+        background-color: color.adjust(v.$gris, $lightness: 25%);
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        order: 2;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        @include m.tablet{
+            position: static;
+            order: 1;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &_menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        height: 60%;
+        padding: 2rem;
+        gap: 1rem;
+
+        @include m.tablet{
+            flex-direction: column;
+        }
+
+        &-texto{
+            display: none;
+        }
+
+    }
+
+    &_enlace{
+        color: v.$blanco;
+    }
+
+    &_icono{
+        padding: 1rem;
+        border-radius: .5rem;
+        &:hover{
+            color: color.adjust(v.$verde, $lightness: 20%);
+        }
+    }
+}
+
+.contenido{
+    flex-grow: 1;
+    order: 1;
+
+    @include m.tablet{
+        order: 2;
+    }
+}

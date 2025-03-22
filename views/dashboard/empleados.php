@@ -1,8 +1,7 @@
 <?php
-$descripcion = 'Vista para toda la información de nosotros';
+$descripcion = 'Vista para la seccion misEmpleados del usuario';
 ?>
-
-<main class="dashboard">
+<main class="dashboard empleados">
     <aside class="dashboard_sidebar">
         <?php include_once __DIR__ . '/../templates/sidebar.php'; ?>
     </aside>

@@ -1,12 +1,13 @@
 <?php
-$descripcion = 'Vista para toda la información de nosotros';
+$descripcion = 'Vista para la seccion misFincas del usuario';
 ?>
 
-<main class="dashboard">
+<main class=" dashboard fincas">
+
     <aside class="dashboard_sidebar">
         <?php include_once __DIR__ . '/../templates/sidebar.php'; ?>
     </aside>
     <div class="contenido">
-        <h2 class="fincas_heading"><?php echo $titulo; ?></h2>
+    <h2 class="fincas_heading"><?php echo $titulo; ?></h2>
     </div>
 </main>

@@ -32,5 +32,8 @@ $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 
 //TODO LO DE LA SECCION DEL DASHBOARD
 $router->get('/dashboard/index', [DashboardController::class, 'index']);
+$router->get('/dashboard/fincas', [DashboardController::class, 'fincas']);
+$router->get('/dashboard/empleados', [DashboardController::class, 'empleados']);
+$router->get('/dashboard/cuenta', [DashboardController::class, 'cuenta']);
 
 $router->comprobarRutas();
