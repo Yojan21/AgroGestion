@@ -708,7 +708,7 @@ h3 {
   .dashboard_sidebar {
     position: static;
     order: 1;
-    height: 100vh;
+    max-height: 100vh;
     position: sticky;
     top: 0;
     display: flex;
@@ -746,10 +746,71 @@ h3 {
 .contenido {
   flex-grow: 1;
   order: 1;
+  margin: 0rem 1rem 10rem 1rem;
 }
 @media (min-width: 768px) {
   .contenido {
     order: 2;
   }
+}
+
+.fincas_boton {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.fincas_boton:hover {
+  background-color: rgb(0, 98.8729508197, 193);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .fincas_boton {
+    width: auto;
+  }
+}
+
+.finca_formulario {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+}
+
+.empleados_boton {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.empleados_boton:hover {
+  background-color: rgb(0, 98.8729508197, 193);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .empleados_boton {
+    width: auto;
+  }
+}
+
+.empleado_formulario {
+  width: min(95%, 60rem);
+  margin: 0 auto;
 }
 /*# sourceMappingURL=app.css.map */

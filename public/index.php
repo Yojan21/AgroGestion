@@ -4,8 +4,10 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AuthController;
-use Controllers\DashboardController;
+use Controllers\FincasController;
 use Controllers\PaginasController;
+use Controllers\DashboardController;
+use Controllers\EmpleadosController;
 
 $router = new Router();
 
@@ -32,8 +34,16 @@ $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 
 //TODO LO DE LA SECCION DEL DASHBOARD
 $router->get('/dashboard/index', [DashboardController::class, 'index']);
-$router->get('/dashboard/fincas', [DashboardController::class, 'fincas']);
-$router->get('/dashboard/empleados', [DashboardController::class, 'empleados']);
+
+//TODO lo de fincas
+$router->get('/dashboard/fincas/index', [FincasController::class, 'index']);
+$router->get('/dashboard/fincas/crear', [FincasController::class, 'crear']);
+$router->post('/dashboard/fincas/crear', [FincasController::class, 'crear']);
+
+$router->get('/dashboard/empleados/index', [EmpleadosController::class, 'index']);
+$router->get('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);
+$router->post('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);
+
 $router->get('/dashboard/cuenta', [DashboardController::class, 'cuenta']);
 
 $router->comprobarRutas();

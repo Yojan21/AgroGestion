@@ -19,7 +19,7 @@ $descripcion = 'Interfaz para el header del layout de usuario';
 
             <?php if(is_auth()){ ?>
                 <a href="/dashboard/index" class="header_enlace">Administrar</a>
-                <form action="/logout" method="POST" class="header_form">
+                <form action="/logout" method="POST" class="header_form header_enlace">
                     <input class="header_submit" type="submit" value="Cerrar Sesión">
                 </form>
             <?php }else{ ?>

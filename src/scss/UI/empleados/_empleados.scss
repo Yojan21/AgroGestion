@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.empleados{
+
+    &_boton{
+        @include m.boton(v.$azul, v.$blanco);
+        border-radius: .5rem;
+        font-size: 2rem;
+        @include m.tablet{
+            width: auto;
+        }
+    }
+}
