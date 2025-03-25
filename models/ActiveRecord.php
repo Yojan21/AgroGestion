@@ -112,6 +112,13 @@ class ActiveRecord {
         return $resultado;
     }
 
+    // Obtener todos los Registros de X usuario
+    public static function all_usuario($orden = 'DESC', $id, $usuario_id) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE $id = '$usuario_id' ORDER BY id $orden ";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
     // Busca un registro por su id
     public static function find($id) {
         $query = "SELECT * FROM " . static::$tabla  ." WHERE id = $id";

@@ -13,6 +13,14 @@
         margin: 1rem 1rem 1rem 0;
     }
 
+    &_nombre{
+        font-weight: v.$black;
+
+        span{
+            font-weight: v.$regular;
+        }
+    }
+
     &_sidebar{
         background-color: color.adjust(v.$gris, $lightness: 25%);
         border-top-right-radius: .5rem;
@@ -76,5 +84,27 @@
 
     @include m.tablet{
         order: 2;
+    }
+}
+
+.general{
+    margin-top: 3rem;
+    @include m.contenedor-sm;
+    text-align: center;
+
+    &_tag{
+        @include m.tag(v.$azul);
+        &{
+            flex-direction: column;
+        }
+
+        &-numero{
+            font-weight: v.$black;
+            font-size: 7rem;
+        }
+        &-info{
+            font-weight: v.$bold;
+            font-size: 2.4rem;
+        }
     }
 }

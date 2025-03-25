@@ -27,9 +27,10 @@
     background-color: $bgColor;
     padding: 1.5rem 4rem;
     color: $colorTexto;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
     border: none;
+    border-radius: 1rem;
     transition-property: background-color;
     transition-duration: .3s;
     text-align: center;
@@ -181,6 +182,25 @@
         &:hover{
             cursor: pointer;
         }
+    }
+}
+
+@mixin tag($color: v.$gris){
+    background-color: color.adjust($color, $lightness: 30%);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet{
+        flex-direction: row
+    }
+
+    &:hover{
+        background-color: color.adjust($color, $lightness: 20%);
     }
 }
 

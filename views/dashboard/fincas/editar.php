@@ -1,5 +1,5 @@
 <?php
-$descripcion = 'Vista para la seccion de crear misFincas del usuario';
+$descripcion = 'Vista para la seccion de editar misFincas del usuario';
 ?>
 
 <main class=" dashboard finca">
@@ -13,11 +13,11 @@ $descripcion = 'Vista para la seccion de crear misFincas del usuario';
     <h2 class="fincas_heading"><?php echo $titulo; ?></h2>
     <?php include_once __DIR__ . './../../templates/alertas.php'; ?>
 
-    <form method="POST" action="/dashboard/fincas/crear" class="formulario finca_formulario">
+    <form method="POST"  class="formulario finca_formulario">
 
         <?php include_once __DIR__ . '/formulario.php'; ?>
 
-        <input type="submit" class="formulario_submit" value="Crear">
+        <input type="submit" class="formulario_submit" value="Editar">
 
     </form>
 

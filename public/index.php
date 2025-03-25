@@ -39,10 +39,18 @@ $router->get('/dashboard/index', [DashboardController::class, 'index']);
 $router->get('/dashboard/fincas/index', [FincasController::class, 'index']);
 $router->get('/dashboard/fincas/crear', [FincasController::class, 'crear']);
 $router->post('/dashboard/fincas/crear', [FincasController::class, 'crear']);
+$router->get('/dashboard/fincas/editar', [FincasController::class, 'editar']);
+$router->post('/dashboard/fincas/editar', [FincasController::class, 'editar']);
+$router->post('/dashboard/fincas/eliminar', [FincasController::class, 'eliminar']);
 
 $router->get('/dashboard/empleados/index', [EmpleadosController::class, 'index']);
 $router->get('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);
 $router->post('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);
+$router->get('/dashboard/empleados/editar', [EmpleadosController::class, 'editar']);
+$router->post('/dashboard/empleados/editar', [EmpleadosController::class, 'editar']);
+$router->post('/dashboard/empleados/eliminar', [EmpleadosController::class, 'eliminar']);
+$router->get('/dashboard/empleados/perfil', [EmpleadosController::class, 'perfil']);
+
 
 $router->get('/dashboard/cuenta', [DashboardController::class, 'cuenta']);
 

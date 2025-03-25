@@ -29,7 +29,10 @@ $descripcion = 'Interfaz del layout para el usuario ';
         echo ($contenido);
         include_once __DIR__ .'/templates/footer.php'; 
     ?>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/build/js/main.min.js" defer></script>
-
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

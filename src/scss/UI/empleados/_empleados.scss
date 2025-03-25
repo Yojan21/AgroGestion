@@ -12,4 +12,51 @@
             width: auto;
         }
     }
+
+    &_contenedor{
+        @include m.contenedor_md;
+        @include m.grid(1, 1rem);
+        @include m.tablet{
+            @include m.grid(2, 1rem)
+        }
+    }
+
+    &_tag{
+        @include m.tag;
+    }
+
+    &_acciones{
+        @include m.grid(2, 2rem);
+
+        @include m.tablet{
+            @include m.grid(1, 1rem);
+            align-items: center;
+        }
+    }
+
+    &_info{
+        text-align: center;
+    }
+
+    &_accion{
+
+        &-gestionar{
+            @include m.boton(v.$azul, v.$blanco);
+            grid-column: 1/3;
+
+            @include m.tablet{
+                grid-column: 1/1;
+            }
+        }
+
+        &-editar{
+            @include m.boton(v.$naranja, v.$blanco);
+        }
+
+        &-eliminar{
+            inset: all;
+            @include m.boton(v.$rojo, v.$blanco);
+        }
+    }
+    
 }
