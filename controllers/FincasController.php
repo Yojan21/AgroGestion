@@ -121,4 +121,24 @@ class FincasController{
             }
         }
     }
+
+    public static function perfil(Router $router) {
+        if(!is_auth()){
+            header('Location: /login');
+        }
+        $alertas = [];
+        $id = $_GET['id'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+
+        if(!$id){
+            header('Location: /dashboard/fincas');
+        }
+        $finca = Finca::find($id);
+
+        $router->render('dashboard/fincas/perfil', [
+            'titulo' => 'Editar Finca',
+            'alertas' => $alertas,
+            'finca' => $finca
+        ]);
+    }
 }

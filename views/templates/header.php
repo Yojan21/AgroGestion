@@ -16,6 +16,7 @@ $descripcion = 'Interfaz para el header del layout de usuario';
             <a href="/" class="header_enlace">Inicio</a>
             <a href="/nosotros" class="header_enlace">Nosotros</a>
             <a href="/contacto" class="header_enlace">Contacto</a>
+            <a href="/planes" class="header_enlace">Planes</a>
 
             <?php if(is_auth()){ ?>
                 <a href="/dashboard/index" class="header_enlace">Administrar</a>

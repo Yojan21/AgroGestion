@@ -380,7 +380,7 @@ h3 {
 
 .header {
   padding: 1rem 3rem;
-  background-image: linear-gradient(to right, rgba(26, 27, 21, 0.3), rgba(26, 27, 21, 0.1)), image-set(url(../img/header.avif) 1x, url(../img/header.webp) 1x, url(../img/header.jpg) 1x);
+  background-image: linear-gradient(to bottom, rgba(26, 27, 21, 0.8), rgba(26, 27, 21, 0.2)), image-set(url(../img/header.avif) 1x, url(../img/header.webp) 1x, url(../img/header.jpg) 1x);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -389,7 +389,8 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0 2rem 0;
+  margin: 0;
+  padding: 2rem 0;
 }
 @media (min-width: 768px) {
   .header_contenedor {
@@ -444,7 +445,7 @@ h3 {
 }
 
 .footer {
-  margin: 0;
+  margin-top: 5rem;
   position: relative;
   z-index: 1;
   background-image: linear-gradient(to right, rgba(26, 27, 21, 0.3), rgba(26, 27, 21, 0.1)), image-set(url(../img/footer.avif) 1x, url(../img/footer.webp) 1x, url(../img/footer.jpg) 1x);
@@ -478,7 +479,7 @@ h3 {
 }
 .footer_interes-enlace {
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 .footer_copy {
   text-align: center;
@@ -556,6 +557,57 @@ h3 {
 }
 .nosotros_texto {
   font-size: 2rem;
+}
+
+.contacto {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+}
+
+.fotos_titulo {
+  text-align: center;
+  text-transform: uppercase;
+}
+.fotos_contenedor {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .fotos_contenedor {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .fotos_contenedor {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.fotos_foto {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .fotos_foto {
+    max-height: 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fotos_foto {
+    max-height: 18rem;
+  }
+}
+@media (min-width: 1200px) {
+  .fotos_foto {
+    max-height: 25rem;
+  }
 }
 
 .tratamiento {
@@ -1105,5 +1157,118 @@ h3 {
 }
 .perfil_tag p {
   font-size: 2.4rem;
+}
+
+.opciones {
+  width: 100%;
+  margin: 5rem 0;
+  padding: 5rem 0;
+  background-image: url(../img/opciones.webp);
+  background-position: left center;
+  background-size: cover;
+}
+.opciones_titulo {
+  text-align: center;
+  color: #1a1b15;
+  text-transform: uppercase;
+}
+.opciones_contenedor {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .opciones_contenedor {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .opciones_contenedor {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.opcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  line-height: 1.5;
+}
+.opcion_titulo {
+  font-size: 2.2rem;
+  color: #FFFFFF;
+}
+.opcion_descripcion {
+  text-align: justify;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+.invitaciones {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  margin: 5rem auto;
+}
+.invitaciones_titulo {
+  text-transform: uppercase;
+  text-align: center;
+}
+.invitaciones_descripcion {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+.invitaciones_listado {
+  font-size: 2rem;
+  text-align: center;
+  gap: 2rem;
+}
+.invitaciones_botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.invitaciones_botones-sub {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  font-size: 2rem;
+}
+.invitaciones_botones-sub:hover {
+  background-color: rgb(0, 98.8729508197, 193);
+  cursor: pointer;
+}
+.invitaciones_botones-sub {
+  width: auto;
+}
+.invitaciones_contacto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.invitaciones_contacto-icono i {
+  font-size: 5rem;
 }
 /*# sourceMappingURL=app.css.map */

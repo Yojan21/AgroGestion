@@ -36,7 +36,7 @@ class DashboardController{
 
 
         // Render a la vista 
-        $router->render('dashboard/cuenta', [
+        $router->render('dashboard/cuenta/index', [
             'titulo' => 'Mi cuenta',
         ]);
     }

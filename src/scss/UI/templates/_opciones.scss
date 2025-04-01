@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.opciones{
+    width: 100%;
+    margin: 5rem 0;
+    padding: 5rem 0;
+    background-image: url(../img/opciones.webp);
+    background-position: left center;
+    background-size: cover;
+
+    &_titulo{
+        text-align: center;
+        color: v.$negro;
+        text-transform: uppercase
+    }
+
+    &_contenedor{
+        @include m.contenedor;
+        @include m.grid(1, 1rem);
+
+        @include m.tablet{
+            @include m.grid(2, 1rem);
+        }
+        @include m.desktop{
+            @include m.grid(4, 2rem);
+        }
+    }
+}
+
+.opcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, .6);
+    border-radius: 1rem;
+    line-height: 1.5;
+    
+
+    &_titulo{
+        font-size: 2.2rem;
+        color: v.$blanco;
+    }
+
+    &_descripcion{
+        text-align: justify;
+        color: v.$blanco;
+        font-size: 2rem;
+    }
+}

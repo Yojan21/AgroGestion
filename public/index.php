@@ -14,6 +14,8 @@ $router = new Router();
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->get('/planes', [PaginasController::class, 'planes']);
+$router->post('/planes', [PaginasController::class, 'planes']);
 $router->get('/terminos', [PaginasController::class, 'terminos']);
 $router->get('/tratamiento', [PaginasController::class, 'tratamiento']);
 
@@ -42,6 +44,7 @@ $router->post('/dashboard/fincas/crear', [FincasController::class, 'crear']);
 $router->get('/dashboard/fincas/editar', [FincasController::class, 'editar']);
 $router->post('/dashboard/fincas/editar', [FincasController::class, 'editar']);
 $router->post('/dashboard/fincas/eliminar', [FincasController::class, 'eliminar']);
+$router->get('/dashboard/fincas/perfil', [FincasController::class, 'perfil']);
 
 $router->get('/dashboard/empleados/index', [EmpleadosController::class, 'index']);
 $router->get('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);
@@ -52,6 +55,6 @@ $router->post('/dashboard/empleados/eliminar', [EmpleadosController::class, 'eli
 $router->get('/dashboard/empleados/perfil', [EmpleadosController::class, 'perfil']);
 
 
-$router->get('/dashboard/cuenta', [DashboardController::class, 'cuenta']);
+$router->get('/dashboard/cuenta/index', [DashboardController::class, 'cuenta']);
 
 $router->comprobarRutas();

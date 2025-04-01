@@ -1,30 +1,28 @@
-(function(){
+(function() {
     function ajustarAside() {
         const aside = document.querySelector('.dashboard_sidebar');
         const footer = document.querySelector('.footer');
         const contenido = document.querySelector('.contenido');
-    
-        if (window.innerWidth < 768) { // Solo aplica en móviles
+
+        // Si alguno de los elementos no existe, detén la ejecución
+        if (!aside || !footer || !contenido) return;
+
+        if (window.innerWidth < 768) {
             const footerRect = footer.getBoundingClientRect();
             const asideHeight = aside.offsetHeight;
-    
-            // Calcula la posición máxima del aside
             const maxBottom = footerRect.top - asideHeight;
-    
-            // Si el aside está sobre el footer, lo ajusta
+
             if (maxBottom < window.innerHeight) {
                 aside.style.bottom = `${window.innerHeight - footerRect.top}px`;
             } else {
-                aside.style.bottom = '0'; // Lo coloca en la parte inferior de la pantalla
+                aside.style.bottom = '0'; // Solo se ejecuta si aside existe
             }
         } else {
-            aside.style.bottom = ''; // Restablece el valor en desktop/tablet
+            aside.style.bottom = '';
         }
     }
-    
-    // Ajusta el aside al cargar la página y al cambiar el tamaño de la ventana
+
     window.addEventListener('load', ajustarAside);
     window.addEventListener('resize', ajustarAside);
     window.addEventListener('scroll', ajustarAside);
-})()
-
+})();

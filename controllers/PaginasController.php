@@ -32,6 +32,15 @@ class PaginasController {
         ]);
     }
 
+    public static function planes(Router $router) {
+
+
+        // Render a la vista 
+        $router->render('paginas/planes', [
+            'titulo' => 'Nuestro Planes',
+        ]);
+    }
+
     public static function terminos(Router $router) {
 
 

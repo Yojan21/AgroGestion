@@ -26,7 +26,7 @@ $descripcion = 'Interfaz para el sidebar de usuario';
             </span>
         </a>
 
-        <a href="/dashboard/cuenta" class="dashboard_enlace">
+        <a href="/dashboard/cuenta/index" class="dashboard_enlace">
             <i class="fa-solid fa-info dashboard_icono"></i>
             <span class="dashboard_menu-texto">
             Mi cuenta

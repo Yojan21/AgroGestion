@@ -10,7 +10,10 @@ $descripcion = 'Vista para la seccion misEmpleados del usuario';
     <div class="contenido empleados_contenido">
 
     <h2 class="empleados_heading"><?php echo $titulo; ?></h2>
-    <a href="/dashboard/empleados/crear" class="empleados_boton">Nuevo Empleado</a>
+    <a href="/dashboard/empleados/crear" class="empleados_boton">
+        <i class="fa-solid fa-circle-plus"></i> 
+        Nuevo Empleado
+    </a>
     
     <div class="empleados_contenedor">
 

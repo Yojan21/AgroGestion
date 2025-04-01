@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use "sass:color"; 
+
+.invitaciones{
+    @include m.contenedor;
+    margin: 5rem auto;
+
+    &_titulo{
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &_descripcion{
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        font-weight: v.$bold;
+    }
+
+    &_listado{
+        font-size: 2rem;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    &_botones{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4rem 0;
+        &-sub{
+            @include m.boton(v.$azul, v.$blanco);
+            font-size: 2rem;
+            &{
+                width: auto;
+            }
+        }
+    }
+
+    &_contacto{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+
+        &-icono{
+            i{
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
