@@ -46,3 +46,24 @@
         }
     }
 }
+
+.tarjetas{
+    &_contenedor{
+        @include m.contenedor;
+        @include m.grid(1, 2rem);
+
+        @include m.tablet{
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.desktop{
+            @include m.grid(3, 3rem);
+        }
+    }
+
+    &_tarjeta{
+        &_enlace{
+            color: v.$negro;
+        }
+    }
+}

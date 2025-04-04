@@ -14,19 +14,19 @@ $descripcion = 'Interfaz para el footer del layout de usuario';
 
 
         <nav class="menu-redes"> 
-            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/yojan.romero.587/">
+            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/yojan.romero.587/" >
                 <span class="menu-redes_ocultar">Facebook</span>
             </a> 
-            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://x.com/RomeroYojan_">
+            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://x.com/RomeroYojan_" >
                 <span class="menu-redes_ocultar">X</span>
             </a> 
-            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/yojanromero/">
+            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/yojanromero/" >
                 <span class="menu-redes_ocultar">LinkedIn</span>
             </a> 
-            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/yojanromero_/">
+            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/yojanromero_/" >
                 <span class="menu-redes_ocultar">Instagram</span>
             </a> 
-            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://github.com/Yojan21">
+            <a class="menu-redes_enlace" rel="noopener noreferrer" target="_blank" href="https://github.com/Yojan21" >
                 <span class="menu-redes_ocultar">GitHub</span>
             </a>
         </nav>

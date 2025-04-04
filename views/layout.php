@@ -8,6 +8,7 @@ $descripcion = 'Interfaz del layout para el usuario ';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroGestión - <?php echo $titulo; ?></title>
+    <link rel="icon" href="/build/img/logo.webp" type="image/webp">
     <?php
     // Definir la descripción dinámicamente
     $descripcion = "Esta es la descripción de mi página web. Puede ser dinámica según el contenido.";

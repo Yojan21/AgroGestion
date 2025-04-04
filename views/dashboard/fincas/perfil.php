@@ -8,19 +8,33 @@ $descripcion = 'Vista para la seccion de revisar toda la informacion misFincas d
         <?php include_once __DIR__ . '/../../templates/sidebar.php'; ?>
     </aside>
 
-    <div class="contenido empleado_contenido">
+    <div class="contenido finca_contenido">
 
-    <h2 class="empleado_heading"><?php echo $titulo; ?></h2>
+        <h2 class="finca_heading"><?php echo $titulo; ?></h2>
 
-    <a href="/dashboard/fincas/index" class="perfil_volver">Volver</a>
+        <a href="/dashboard/fincas/index" class="perfil_volver">Volver</a>
 
-    <div class="perfil_contenedor">
-        <div class="perfil_tag">
-            <h2 class="perfil_tag-nombre"><?php echo $finca->nombre ?></h2>
-            <p class="perfil_tag-cedula"><?php echo $finca->vereda . ', ' . $finca->municipio;?></p>
-            <p class="perfil_tag-telefono"><?php echo $finca->extension . ' Hectáreas'; ?></p>
+        <div class="tarjetas_contenedor">
+
+            <div class="tarjetas_tarjetatarjetas_tarjeta">
+                <a class="tarjetas_tarjeta_enlace" href="/dashboard/fincas/lotes/index?id=<?php echo $finca->id ?>">
+                    <h3 class="tarjetas_tarjeta_titulo">Mis Lotes</h3>
+                    <p class="tarjetas_tarjeta_comentario">En esta sección puedes controlar todo lo relacionado con los lotes de tu finca <?php echo $finca->nombre; ?></p>
+                </a>
+            </div>
+            <div class="tarjetas_tarjeta">
+                <a class="tarjetas_tarjeta_enlace" href="/dashboard/fincas/cultivos/index?id=<?php echo $finca->id ?>">
+                    <h3 class="tarjetas_tarjeta_titulo">Mis Cultivos</h3>
+                    <p class="tarjetas_tarjeta_comentario">En esta sección puedes controlar todo lo relacionado con los cultivos adicionales de tu finca <?php echo $finca->nombre; ?></p>
+                </a>
+            </div>
+            <div class="tarjetas_tarjetatarjetas_tarjeta">
+                <a class="tarjetas_tarjeta_enlace" href="/dashboard/fincas/animales/index?id=<?php echo $finca->id ?>">
+                    <h3 class="tarjetas_tarjeta_titulo">Mis Animales</h3>
+                    <p class="tarjetas_tarjeta_comentario">En esta sección puedes controlar todo lo relacionado con los animales de tu finca <?php echo $finca->nombre; ?></p>
+                </a>
+            </div>
         </div>
-    </div>
 
     </div>
 

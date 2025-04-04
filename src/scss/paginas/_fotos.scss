@@ -10,28 +10,22 @@
 
     &_contenedor{
         @include m.contenedor;
-
         @include m.grid(1, 2rem);
         @include m.tablet{
             @include m.grid(2, 2rem);
         }
-        @include m.desktop{
-            @include m.grid(3, 2rem);
+        @include m.xl_desktop{
+            @include m.grid(4, 2rem);
+        }
+        &{
+            place-items: center;
         }
     }
 
     &_foto{
-        max-width: 100%;
-        max-height: 100%;   
+        width: 300px;
+        height: 200px;   
         overflow: hidden;
-        @include m.tablet{
-            max-height: 20rem;
-        }
-        @include m.desktop{
-            max-height: 18rem;
-        }
-        @include m.xl_desktop{
-            max-height: 25rem;
-        }
+        border-radius: .5rem;
     }
 }

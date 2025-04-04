@@ -134,9 +134,12 @@ class FincasController{
             header('Location: /dashboard/fincas');
         }
         $finca = Finca::find($id);
+        if(!$finca){
+            header('Location: /dashboard/fincas');
+        }
 
         $router->render('dashboard/fincas/perfil', [
-            'titulo' => 'Editar Finca',
+            'titulo' => $finca->nombre . ", " . $finca->vereda . " - " . $finca->municipio,
             'alertas' => $alertas,
             'finca' => $finca
         ]);

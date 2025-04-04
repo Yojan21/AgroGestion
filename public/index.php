@@ -4,8 +4,11 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AuthController;
+use Controllers\LotesController;
 use Controllers\FincasController;
 use Controllers\PaginasController;
+use Controllers\AnimalesController;
+use Controllers\CultivosController;
 use Controllers\DashboardController;
 use Controllers\EmpleadosController;
 
@@ -46,6 +49,19 @@ $router->post('/dashboard/fincas/editar', [FincasController::class, 'editar']);
 $router->post('/dashboard/fincas/eliminar', [FincasController::class, 'eliminar']);
 $router->get('/dashboard/fincas/perfil', [FincasController::class, 'perfil']);
 
+//TODO lo de lotes
+$router->get('/dashboard/fincas/lotes/index', [LotesController::class, 'index']);
+$router->post('/dashboard/fincas/lotes/index', [LotesController::class, 'index']);
+
+//TODO lo de cultivos
+$router->get('/dashboard/fincas/cultivos/index', [CultivosController::class, 'index']);
+$router->post('/dashboard/fincas/cultivos/index', [CultivosController::class, 'index']);
+
+//TODO lo de animales
+$router->get('/dashboard/fincas/animales/index', [AnimalesController::class, 'index']);
+$router->post('/dashboard/fincas/animales/index', [AnimalesController::class, 'index']);
+
+//TODO lo relacionado con empleados
 $router->get('/dashboard/empleados/index', [EmpleadosController::class, 'index']);
 $router->get('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);
 $router->post('/dashboard/empleados/crear', [EmpleadosController::class, 'crear']);

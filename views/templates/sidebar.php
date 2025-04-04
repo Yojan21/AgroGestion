@@ -13,14 +13,14 @@ $descripcion = 'Interfaz para el sidebar de usuario';
         </a>
 
         <a href="/dashboard/fincas/index" class="dashboard_enlace">
-            <i class="fa-solid fa-tractor dashboard_icono"></i>
+            <i class="fa-solid fa-tractor dashboard_icono" ></i>
             <span class="dashboard_menu-texto">
             Mis Fincas
             </span>
         </a>
 
         <a href="/dashboard/empleados/index" class="dashboard_enlace">
-            <i class="fa-solid fa-users dashboard_icono"></i>
+            <i class="fa-solid fa-users dashboard_icono" ></i>
             <span class="dashboard_menu-texto">
             Mis Empleados
             </span>

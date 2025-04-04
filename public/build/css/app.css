@@ -479,12 +479,13 @@ h3 {
 }
 .footer_interes-enlace {
   color: #FFFFFF;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 .footer_copy {
   text-align: center;
   margin: 2rem 0;
   color: #FFFFFF;
+  font-size: 2.2rem;
 }
 
 .menu-redes {
@@ -582,32 +583,21 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .fotos_contenedor {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+}
+.fotos_contenedor {
+  place-items: center;
 }
 .fotos_foto {
-  max-width: 100%;
-  max-height: 100%;
+  width: 300px;
+  height: 200px;
   overflow: hidden;
-}
-@media (min-width: 768px) {
-  .fotos_foto {
-    max-height: 20rem;
-  }
-}
-@media (min-width: 1024px) {
-  .fotos_foto {
-    max-height: 18rem;
-  }
-}
-@media (min-width: 1200px) {
-  .fotos_foto {
-    max-height: 25rem;
-  }
+  border-radius: 0.5rem;
 }
 
 .tratamiento {
@@ -959,6 +949,31 @@ h3 {
 .fincas_accion-eliminar:hover {
   background-color: #760000;
   cursor: pointer;
+}
+
+.tarjetas_contenedor {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .tarjetas_contenedor {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .tarjetas_contenedor {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.tarjetas_tarjeta_enlace {
+  color: #1a1b15;
 }
 
 .finca_formulario {
