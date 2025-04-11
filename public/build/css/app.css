@@ -666,7 +666,7 @@ h3 {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -675,12 +675,21 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  width: 100%;
-  align-self: flex-start;
+  margin-bottom: 1rem;
 }
 .formulario_submit:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .formulario_submit {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.formulario_submit {
+  width: 100%;
+  align-self: flex-start;
 }
 @media (min-width: 480px) {
   .formulario_submit {
@@ -843,7 +852,7 @@ h3 {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -852,12 +861,21 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  border-radius: 0.5rem;
-  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .fincas_boton:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .fincas_boton {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.fincas_boton {
+  border-radius: 0.5rem;
+  font-size: 2rem;
 }
 @media (min-width: 768px) {
   .fincas_boton {
@@ -898,7 +916,7 @@ h3 {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -907,17 +925,26 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  grid-column: 1/3;
+  margin-bottom: 1rem;
 }
 .fincas_accion-gestionar:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .fincas_accion-gestionar {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.fincas_accion-gestionar {
+  grid-column: 1/3;
+}
 .fincas_accion-editar {
   background-color: #f0892a;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -926,17 +953,24 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 .fincas_accion-editar:hover {
   background-color: rgb(215.8026315789, 111.4473684211, 15.1973684211);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .fincas_accion-editar {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 .fincas_accion-eliminar {
   inset: all;
   background-color: rgb(169, 0, 0);
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -945,10 +979,17 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 .fincas_accion-eliminar:hover {
   background-color: #760000;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .fincas_accion-eliminar {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 
 .tarjetas_contenedor {
@@ -981,11 +1022,11 @@ h3 {
   margin: 0 auto;
 }
 
-.empleados_boton {
+.lotes_boton {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -994,12 +1035,51 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  border-radius: 0.5rem;
-  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.lotes_boton:hover {
+  background-color: rgb(0, 98.8729508197, 193);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .lotes_boton {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.lotes_contenedor {
+  width: min(95%, 80rem);
+  margin: 0 auto;
+}
+
+.empleados_boton {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 .empleados_boton:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .empleados_boton {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.empleados_boton {
+  border-radius: 0.5rem;
+  font-size: 2rem;
 }
 @media (min-width: 768px) {
   .empleados_boton {
@@ -1058,7 +1138,7 @@ h3 {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -1067,11 +1147,20 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  grid-column: 1/3;
+  margin-bottom: 1rem;
 }
 .empleados_accion-gestionar:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .empleados_accion-gestionar {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.empleados_accion-gestionar {
+  grid-column: 1/3;
 }
 @media (min-width: 768px) {
   .empleados_accion-gestionar {
@@ -1082,7 +1171,7 @@ h3 {
   background-color: #f0892a;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -1091,17 +1180,24 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 .empleados_accion-editar:hover {
   background-color: rgb(215.8026315789, 111.4473684211, 15.1973684211);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .empleados_accion-editar {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 .empleados_accion-eliminar {
   inset: all;
   background-color: rgb(169, 0, 0);
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -1110,10 +1206,17 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 .empleados_accion-eliminar:hover {
   background-color: #760000;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .empleados_accion-eliminar {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 
 .empleado_formulario {
@@ -1125,7 +1228,7 @@ h3 {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -1134,12 +1237,21 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  width: auto;
-  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .perfil_volver:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .perfil_volver {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+.perfil_volver {
+  width: auto;
+  font-size: 2rem;
 }
 .perfil_contenedor {
   width: min(95%, 60rem);
@@ -1258,7 +1370,7 @@ h3 {
   background-color: #007df4;
   padding: 1.5rem 4rem;
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
@@ -1267,13 +1379,20 @@ h3 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .invitaciones_botones-sub:hover {
   background-color: rgb(0, 98.8729508197, 193);
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .invitaciones_botones-sub {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
 .invitaciones_botones-sub {
+  font-size: 2rem;
   width: auto;
 }
 .invitaciones_contacto {

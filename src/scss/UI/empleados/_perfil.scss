@@ -5,8 +5,10 @@
 .perfil{
     &_volver{
         @include m.boton(v.$azul, v.$blanco);
-        width: auto;
-        font-size: 2rem;
+        &{
+            width: auto;
+            font-size: 2rem;
+        }
     }
 
     &_contenedor{

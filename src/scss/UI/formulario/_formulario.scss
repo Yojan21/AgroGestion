@@ -42,8 +42,10 @@
     }
     &_submit{
         @include m.boton(v.$azul, v.$blanco);
-        width: 100%;
-        align-self: flex-start;
+        &{
+            width: 100%;
+            align-self: flex-start;
+        }
 
         @include m.telefono{
             width: auto;

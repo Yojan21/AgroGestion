@@ -1,3 +1,14 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 @use "sass:color"; 
+
+.lotes{
+
+    &_boton{
+        @include m.boton(v.$azul,v.$blanco);
+    }
+
+    &_contenedor{
+        @include m.contenedor_md();
+    }
+}

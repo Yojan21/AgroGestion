@@ -30,8 +30,9 @@
         margin: 4rem 0;
         &-sub{
             @include m.boton(v.$azul, v.$blanco);
-            font-size: 2rem;
+            
             &{
+                font-size: 2rem;
                 width: auto;
             }
         }

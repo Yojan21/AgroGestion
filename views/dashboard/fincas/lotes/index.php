@@ -1,5 +1,5 @@
 <?php
-$descripcion = 'Vista para la seccion del cafe de la finca seleccionada';
+$descripcion = 'Vista para la seccion de los lostes de la finca seleccionada';
 ?>
 
 <main class=" dashboard lotes">
@@ -11,7 +11,21 @@ $descripcion = 'Vista para la seccion del cafe de la finca seleccionada';
     <div class="contenido lotes_contenido">
 
         <h2 class="lotes_heading"><?php echo $titulo; ?></h2>
-        <a href="/dashboard/fincas/perfil?id=<?php echo $finca->id; ?>" class="perfil_volver">Volver</a>
+
+        <div class="lotes_acciones">
+            <a href="/dashboard/fincas/perfil?id=<?php echo $finca->id; ?>" class=" lotes_boton lotes_volver">Volver</a>
+            <a href="/dashboard/fincas/lotes/crear?id=<?php echo $finca->id; ?>" class="lotes_boton lotes_crear">Crear Lote</a>
+        </div>
+        
+
+        <div class="lotes_contenedor">
+
+        <?php foreach ($lotes as $lote): ?>
+            <div class="lotes_item">
+                <h4 class="lotes_nombre"><?php echo $lote->nombre; ?></h4>
+            </div>
+        <?php endforeach; ?>
+        </div>
     </div>
 
 </main>

@@ -52,6 +52,8 @@ $router->get('/dashboard/fincas/perfil', [FincasController::class, 'perfil']);
 //TODO lo de lotes
 $router->get('/dashboard/fincas/lotes/index', [LotesController::class, 'index']);
 $router->post('/dashboard/fincas/lotes/index', [LotesController::class, 'index']);
+$router->get('/dashboard/fincas/lotes/crear', [LotesController::class, 'crear']);
+$router->post('/dashboard/fincas/lotes/crear', [LotesController::class, 'crear']);
 
 //TODO lo de cultivos
 $router->get('/dashboard/fincas/cultivos/index', [CultivosController::class, 'index']);
