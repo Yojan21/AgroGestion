@@ -11,5 +11,7 @@ $descripcion = 'Interfaz de inicio';
 
     <h2 class="fotos_titulo">Orgullosos del campo Colombiano</h2>
     <?php include_once __DIR__ . '/../templates/fotos.php'; ?>
+
+    <h2 class="footer_espacio"></h2>
 </main>
 

@@ -4,11 +4,8 @@
 
 .lotes{
 
-    &_boton{
-        @include m.boton(v.$azul,v.$blanco);
-    }
-
     &_contenedor{
         @include m.contenedor_md();
     }
+
 }

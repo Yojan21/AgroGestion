@@ -3,10 +3,10 @@
 @use "sass:color"; 
 
 .footer{
-    margin-top: 5rem;
+    padding-top: 5rem;
     position: relative;
     z-index: 1;
-    background-image: linear-gradient(to right, rgba(v.$negro, .3), rgba(v.$negro, .1)), 
+    background-image: linear-gradient(to right, rgba(v.$negro, .7), rgba(v.$negro, .6)), 
     image-set(
         url(../img/footer.avif) 1x,
         url(../img/footer.webp) 1x,

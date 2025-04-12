@@ -24,7 +24,12 @@ class LotesController{
             header('Location: /dashboard/fincas');
         }
 
-        $lotes = Lote::all('ASC');
+        $condiciones = [
+            'finca_id' => $finca->id,
+            'usuario_id' => $_SESSION['id']
+        ];
+
+        $lotes = Lote::whereArray($condiciones);
         
         $router->render('dashboard/fincas/lotes/index', [
             'titulo' =>  'Lotes de' . $finca->nombre,

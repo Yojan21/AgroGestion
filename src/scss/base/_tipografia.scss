@@ -22,6 +22,45 @@ h3 {
     @include m.nombre_pagina;
 }
 
-[class$="descripcion"]{
+[class$="_descripcion"]{
     @include m.descripcion_pagina;
 }
+
+
+//Todos los botones para las acciones en diferentes paginas
+[class$="-gestionar"]{
+    @include m.boton(v.$azul, v.$blanco); 
+    &{
+        grid-column: 1/3;
+    }
+}
+[class$="-editar"]{
+    @include m.boton(v.$naranja, v.$blanco);
+}
+[class$="-eliminar"]{
+    @include m.boton(v.$rojo, v.$blanco);
+}
+[class$="_volver"]{
+    @include m.boton(v.$azul,v.$blanco);
+    @include m.tablet{
+        width: auto !important;
+    }
+
+}
+[class$="_crear"]{
+    @include m.boton(v.$azul,v.$blanco);
+    @include m.tablet{
+        width: auto !important;
+    }
+}
+[class$="_botones"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    gap: 1rem;
+
+    @include m.tablet{
+        flex-direction: row;
+    }
+} 

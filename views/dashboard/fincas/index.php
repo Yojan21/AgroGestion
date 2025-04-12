@@ -11,10 +11,12 @@ $descripcion = 'Vista para la seccion misFincas del usuario';
     <div class="contenido fincas_contenido">
 
     <h2 class="fincas_heading"><?php echo $titulo; ?></h2>
-    <a href="/dashboard/fincas/crear" class="fincas_boton">
-        <i class="fa-solid fa-circle-plus"></i> 
-        Nueva Finca
-    </a>
+    <div class="fincas_botones">
+        <a href="/dashboard/fincas/crear" class="fincas_crear">
+            <i class="fa-solid fa-circle-plus"></i> 
+            Nueva Finca
+        </a>
+    </div>
 
     <div class="fincas_contenedor">
             <?php foreach ($fincas as $finca): ?>

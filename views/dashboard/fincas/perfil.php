@@ -11,8 +11,11 @@ $descripcion = 'Vista para la seccion de revisar toda la informacion misFincas d
     <div class="contenido finca_contenido">
 
         <h2 class="finca_heading"><?php echo $titulo; ?></h2>
-
-        <a href="/dashboard/fincas/index" class="perfil_volver">Volver</a>
+        <div class="perfil_botones">
+            <a href="/dashboard/fincas/index" class="perfil_volver">
+                <i class="fa-solid fa-arrow-left"></i>Volver
+            </a>
+        </div>
 
         <div class="tarjetas_contenedor">
 

@@ -11,7 +11,7 @@
 
     <div class="invitaciones_subtitulo">
         <p class="invitaciones_listado">
-            <i class="fa-sharp fa-solid fa-check" style="color: #36f033;"></i>  <span class="invitaciones_listado-bold">toma decisiones basadas en datos </span> 
+            <i class="fa-sharp fa-solid fa-check" style="color: #36f033;"></i>  <span class="invitaciones_listado-bold">Toma decisiones basadas en datos </span> 
             con informes en tiempo real.
         </p>
     </div>

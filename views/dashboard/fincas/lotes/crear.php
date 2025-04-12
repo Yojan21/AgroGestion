@@ -13,7 +13,9 @@ $descripcion = 'Vista para la creacion de un lote de la finca seleccionada';
         <h2 class="lotes_heading"><?php echo $titulo; ?></h2>
 
         <div class="lotes_acciones">
-            <a href="/dashboard/fincas/lotes/index?id=<?php echo $finca->id; ?>" class=" lotes_boton lotes_volver">Volver</a>
+            <a href="/dashboard/fincas/perfil?id=<?php echo $finca->id; ?>" class=" lotes_boton lotes_volver">
+                <i class="fa-solid fa-arrow-left"></i>
+            Volver</a>
         </div>
 
         <div class="lotes_contenedor">

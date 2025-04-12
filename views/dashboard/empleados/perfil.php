@@ -12,7 +12,11 @@ $descripcion = 'Vista para la seccion de revisar toda la informacion misEmpleado
 
     <h2 class="empleado_heading"><?php echo $titulo; ?></h2>
 
-    <a href="/dashboard/empleados/index" class="perfil_volver">Volver</a>
+    <div class="fincas_botones">
+        <a href="/dashboard/empleados/index" class="perfil_volver">
+            <i class="fa-solid fa-arrow-left"></i>
+        Volver</a>
+    </div>
 
     <div class="perfil_contenedor">
         <div class="perfil_tag">
