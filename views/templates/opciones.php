@@ -1,7 +1,5 @@
 
 <section class="opciones">
-    
-
     <div class="opciones_contenedor">
         <div class="opcion">
             <h3 class="opcion_titulo">Tus Fincas</h3>

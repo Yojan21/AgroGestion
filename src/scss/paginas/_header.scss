@@ -20,6 +20,7 @@
         align-items: center;
         margin: 0;
         padding: 2rem 0;
+        width: 100%;
 
         @include m.tablet{
             flex-direction: row;
@@ -29,11 +30,29 @@
     }
 
     &_heading{
-        @include m.texto_fluido(2rem, 5rem);
-        margin-bottom: 3rem;
         color: v.$blanco;
+        margin: 0;
         @include m.tablet{
-            margin: 0;
+            @include m.texto_fluido(2rem, 5rem);
+        }
+    }
+
+    &_nombre{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_icono{
+        display: flex;
+        align-items: end;
+        font-size: 4rem;
+        color: v.$blanco;
+
+        @include m.tablet{
+            display: none;
         }
     }
 
@@ -41,12 +60,28 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        gap: 2rem;
+        position: fixed;
+        overflow: hidden;
+        
+        &.open{
+            opacity: 1;
+            visibility: visible;
+        }
         @include m.tablet{
+            all: unset;
+            display: flex;
             flex-direction: row;
-            gap: 2rem;
+            align-items: center;
+            visibility: visible;
+            opacity: 1;
+            gap: 2rem
         }
     }
+
+    
 
     &_enlace{
         @include m.enlace(v.$blanco, v.$blanco);
@@ -57,4 +92,66 @@
         @include m.enlace(v.$blanco, v.$blanco);
     }
 
+}
+
+.body-modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.modal{
+    &-open{
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background-color: rgba(v.$negro, .8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn ease-in .5s;
+    }
+    &.fadeOut{
+        animation: fadeOut ease-out .5s;
+    }
+
+    @include m.tablet{
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.btn_cerrar{
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background-color: v.$blanco;
+    border: none;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
 }

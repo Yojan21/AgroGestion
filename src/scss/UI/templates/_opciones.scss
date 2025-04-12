@@ -10,11 +10,6 @@
     background-position: left center;
     background-size: cover;
 
-    &_titulo{
-        text-align: center;
-        color: v.$negro;
-        text-transform: uppercase
-    }
 
     &_contenedor{
         @include m.contenedor;

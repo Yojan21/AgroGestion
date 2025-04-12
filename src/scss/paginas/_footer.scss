@@ -4,8 +4,6 @@
 
 .footer{
     padding-top: 5rem;
-    position: relative;
-    z-index: 1;
     background-image: linear-gradient(to right, rgba(v.$negro, .7), rgba(v.$negro, .6)), 
     image-set(
         url(../img/footer.avif) 1x,
@@ -15,6 +13,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    
     &_grid{
         @include m.contenedor;
         display: flex;
