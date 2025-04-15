@@ -15,21 +15,21 @@ $descripcion = 'Interfaz para el sidebar de usuario';
         <a href="/dashboard/fincas/index" class="dashboard_enlace">
             <i class="fa-solid fa-tractor dashboard_icono" ></i>
             <span class="dashboard_menu-texto">
-            Mis Fincas
+            Fincas
             </span>
         </a>
 
         <a href="/dashboard/empleados/index" class="dashboard_enlace">
             <i class="fa-solid fa-users dashboard_icono" ></i>
             <span class="dashboard_menu-texto">
-            Mis Empleados
+            Empleados
             </span>
         </a>
 
         <a href="/dashboard/cuenta/index" class="dashboard_enlace">
             <i class="fa-solid fa-info dashboard_icono"></i>
             <span class="dashboard_menu-texto">
-            Mi cuenta
+            Cuenta
             </span>
         </a>
     </nav>
