@@ -6,8 +6,7 @@
     if(enlace.length > 1) {
         enlace.forEach(function(elemento) {
             if(elemento.href.includes("dashboard/")) {
-                console.log("Enlace encontrado en el dashboard");
-                enlace[1].classList.add("dashboard_enlace-activo");
+                console.log("Enlace encontrado en el dashboard");                enlace[1].classList.add("dashboard_enlace-activo");
             }
         });
     }

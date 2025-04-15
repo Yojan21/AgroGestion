@@ -24,6 +24,7 @@
 .tarjetas{
     &_contenedor{
         @include m.contenedor;
+        border-bottom: 3px outset v.$gris;
         @include m.grid(1, 2rem);
 
         @include m.tablet{

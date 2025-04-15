@@ -1180,6 +1180,7 @@ h3 {
 .tarjetas_contenedor {
   width: min(95%, 140rem);
   margin: 0 auto;
+  border-bottom: 3px outset #64748B;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
@@ -1219,50 +1220,6 @@ h3 {
 .finca_formulario {
   width: min(95%, 60rem);
   margin: 0 auto;
-}
-
-.lotes_contenedor {
-  width: min(95%, 80rem);
-  margin: 0 auto;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-}
-.lotes_contenedor-contenido {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-  background-color: rgb(186.3723849372, 194.2719665272, 205.6276150628);
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .lotes_contenedor-contenido {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.lotes_contenedor-contenido:hover {
-  background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
-}
-.lotes_nombre {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.lotes_descripcion {
-  font-size: 1.8rem;
-  text-align: left;
-}
-.lotes_acciones {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .empleados_contenedor {
@@ -1377,6 +1334,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1rem;
   line-height: 1.5;
+  height: 100%;
 }
 .opcion_titulo {
   font-size: 2.2rem;
@@ -1469,5 +1427,53 @@ h3 {
 }
 .principal_enlace-icono {
   font-size: 2rem;
+}
+
+.lotes_contenedor {
+  width: min(95%, 80rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.lotes_contenedor-contenido {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: rgb(186.3723849372, 194.2719665272, 205.6276150628);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .lotes_contenedor-contenido {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.lotes_contenedor-contenido:hover {
+  background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
+}
+.lotes_nombre {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.lotes_descripcion {
+  font-size: 1.8rem;
+  text-align: left;
+}
+.lotes_acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.lotes_crud_contenedor {
+  width: min(95%, 80rem);
+  margin: 0 auto;
 }
 /*# sourceMappingURL=app.css.map */
