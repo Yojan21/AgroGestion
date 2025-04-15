@@ -19,22 +19,22 @@ $descripcion = 'Vista para la seccion de revisar toda la informacion misFincas d
 
         <div class="tarjetas_contenedor">
 
-            <div class="tarjetas_tarjetatarjetas_tarjeta">
+            <div class="tarjetas_tarjeta">
                 <a class="tarjetas_tarjeta_enlace" href="/dashboard/fincas/lotes/index?id=<?php echo $finca->id ?>">
                     <h3 class="tarjetas_tarjeta_titulo">Mis Lotes</h3>
-                    <p class="tarjetas_tarjeta_comentario">En esta sección puedes controlar todo lo relacionado con los lotes de tu finca <?php echo $finca->nombre; ?></p>
+                    <p class="tarjetas_tarjeta_comentario">Crear, edita o elimina los lotes de tu finca</p>
                 </a>
             </div>
             <div class="tarjetas_tarjeta">
                 <a class="tarjetas_tarjeta_enlace" href="/dashboard/fincas/cultivos/index?id=<?php echo $finca->id ?>">
                     <h3 class="tarjetas_tarjeta_titulo">Mis Cultivos</h3>
-                    <p class="tarjetas_tarjeta_comentario">En esta sección puedes controlar todo lo relacionado con los cultivos adicionales de tu finca <?php echo $finca->nombre; ?></p>
+                    <p class="tarjetas_tarjeta_comentario">Puedes crear cuantos cultivos quieras, eliminalos o editalos</p>
                 </a>
             </div>
-            <div class="tarjetas_tarjetatarjetas_tarjeta">
+            <div class="tarjetas_tarjeta">
                 <a class="tarjetas_tarjeta_enlace" href="/dashboard/fincas/animales/index?id=<?php echo $finca->id ?>">
                     <h3 class="tarjetas_tarjeta_titulo">Mis Animales</h3>
-                    <p class="tarjetas_tarjeta_comentario">En esta sección puedes controlar todo lo relacionado con los animales de tu finca <?php echo $finca->nombre; ?></p>
+                    <p class="tarjetas_tarjeta_comentario">Puedes crear toda un lista de los animales de tu finca y editarlos a tu manera</p>
                 </a>
             </div>
         </div>

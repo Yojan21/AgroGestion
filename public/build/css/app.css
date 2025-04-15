@@ -739,13 +739,13 @@ h3 {
 }
 .footer_interes-enlace {
   color: #FFFFFF;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 .footer_copy {
   text-align: center;
   margin: 2rem 0;
   color: #FFFFFF;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 
 .menu-redes {
@@ -1048,6 +1048,7 @@ h3 {
   height: 60%;
   padding: 2rem;
   gap: 1rem;
+  transition: all 2s ease-in-out;
 }
 @media (min-width: 768px) {
   .dashboard_menu {
@@ -1200,6 +1201,17 @@ h3 {
     place-items: center;
   }
 }
+.tarjetas_tarjeta {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .tarjetas_tarjeta:hover {
+    background-color: rgb(229.5, 229.5, 229.5);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgb(229.5, 229.5, 229.5);
+    transition: all 0.3s ease-in-out;
+  }
+}
 .tarjetas_tarjeta_enlace {
   color: #1a1b15;
 }
@@ -1212,6 +1224,45 @@ h3 {
 .lotes_contenedor {
   width: min(95%, 80rem);
   margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.lotes_contenedor-contenido {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: rgb(186.3723849372, 194.2719665272, 205.6276150628);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .lotes_contenedor-contenido {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.lotes_contenedor-contenido:hover {
+  background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
+}
+.lotes_nombre {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.lotes_descripcion {
+  font-size: 1.8rem;
+  text-align: left;
+}
+.lotes_acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .empleados_contenedor {

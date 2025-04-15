@@ -25,24 +25,26 @@ $descripcion = 'Vista para la seccion de los lostes de la finca seleccionada';
         <div class="lotes_contenedor">
 
             <?php foreach ($lotes as $lote): ?>
-                <div class="lotes_item">
-                    <h4 class="lotes_nombre"><?php echo $lote->nombre; ?></h4>
-                    <p class="lotes_descripcion"><?php echo $lote->descripcion; ?></p>
-                </div>
-                <div class="lotes_acciones">
+                <div class="lotes_contenedor-contenido">
+                    <div class="lotes_item">
+                        <h4 class="lotes_nombre"><?php echo $lote->nombre; ?></h4>
+                        <p class="lotes_descripcion"><?php echo $lote->descripcion; ?></p>
+                    </div>
+                    <div class="lotes_acciones">
 
-                    <a class="lotes_accion lotes_accion-editar" href="/dashboard/fincas/lotes/editar?id=<?php echo $finca->id ?>&token=<?php echo $lote->id ?>">
-                        <i class="fa-solid fa-pencil"></i>
-                    Editar
-                    </a>
+                        <a class="lotes_accion lotes_accion-editar" href="/dashboard/fincas/lotes/editar?id=<?php echo $finca->id ?>&token=<?php echo $lote->id ?>">
+                            <i class="fa-solid fa-pencil"></i>
+                        Editar
+                        </a>
 
-                    <form method="POST" action="/dashboard/fincas/lotes/eliminar" class="lotes_formulario">
-                        <input type="hidden" name="id" value="<?php echo $lote->id; ?>">
-                        <button class="lotes_accion lotes_accion-eliminar" type="submit">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                            Eliminar
-                        </button>
-                    </form>
+                        <form method="POST" action="/dashboard/fincas/lotes/eliminar" class="lotes_formulario">
+                            <input type="hidden" name="id" value="<?php echo $lote->id; ?>">
+                            <button class="lotes_accion lotes_accion-eliminar" type="submit">
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                Eliminar
+                            </button>
+                        </form>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>

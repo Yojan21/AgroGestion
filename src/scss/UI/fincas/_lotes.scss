@@ -6,6 +6,32 @@
 
     &_contenedor{
         @include m.contenedor_md();
+        @include m.grid(2, 2rem);
+
+        &-contenido{
+            @include m.grid(2, 2rem);
+            @include m.tag();
+        }
+
     }
+
+
+    &_nombre{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &_descripcion{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    &_acciones{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+
 
 }

@@ -36,6 +36,16 @@
     }
 
     &_tarjeta{
+        padding: 1rem;
+
+        @include m.tablet{
+            &:hover{
+                background-color: color.scale(v.$blanco, $lightness: -10%);
+                border-radius: 1rem;
+                box-shadow: 0 0 1rem color.scale(v.$blanco, $lightness: -10%);
+                transition: all 0.3s ease-in-out;
+            }
+        }
         &_enlace{
             color: v.$negro;
         }
