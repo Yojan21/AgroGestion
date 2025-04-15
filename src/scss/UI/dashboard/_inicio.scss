@@ -70,12 +70,19 @@
         display: flex;
         place-items: center;
         align-items: center;
+
+        &-activo{
+            background-color: color.adjust(v.$gris, $lightness: -10%);
+            border-radius: .5rem;
+        }
     }
 
     &_icono{
         padding: 1rem;
         border-radius: .5rem;
         margin: 0;
+        transition: background-color 0.3s ease-in-out;
+
         &:hover{
             background-color: color.adjust(v.$gris, $lightness: -10%);
         }

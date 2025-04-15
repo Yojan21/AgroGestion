@@ -1064,10 +1064,15 @@ h3 {
   place-items: center;
   align-items: center;
 }
+.dashboard_enlace-activo {
+  background-color: rgb(78.6610878661, 91.2468619247, 109.3389121339);
+  border-radius: 0.5rem;
+}
 .dashboard_icono {
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 0;
+  transition: background-color 0.3s ease-in-out;
 }
 .dashboard_icono:hover {
   background-color: rgb(78.6610878661, 91.2468619247, 109.3389121339);
