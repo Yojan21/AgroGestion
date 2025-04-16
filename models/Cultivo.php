@@ -3,8 +3,8 @@
 namespace Model;
 
 class Cultivo extends ActiveRecord {
-    protected static $tabla = 'lotes';
-    protected static $columnasDB = ['id', 'nombre', 'descripcion', 'cantidad','usuario_id', 'finca_id', 'lote_id'];
+    protected static $tabla = 'cultivos';
+    protected static $columnasDB = ['id', 'nombre', 'descripcion', 'cantidad','usuario_id', 'finca_id'];
 
     public $id;
     public $nombre;
@@ -12,7 +12,6 @@ class Cultivo extends ActiveRecord {
     public $cantidad;
     public $finca_id;
     public $usuario_id;
-    public $lote_id;
     
     public function __construct($args = [])
     {
@@ -22,7 +21,6 @@ class Cultivo extends ActiveRecord {
         $this->cantidad = $args['cantidad'] ?? 0;
         $this->usuario_id = $args['usuario_id'] ?? '';
         $this->finca_id = $args['finca_id'] ?? '';
-        $this->lote_id = $args['lote_id'] ?? '';
     }
 
     public function validar() {

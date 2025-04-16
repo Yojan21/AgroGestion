@@ -228,3 +228,37 @@
 @mixin bg-gradient($bg_color){
     background-image: linear-gradient(to left top, $bg_color, color.adjust($bg_color, $lightness: 15%));
 }
+
+@mixin orden{
+    &_contenedor{
+        @include contenedor_md();
+        @include grid(2, 2rem);
+
+        &-contenido{
+            @include grid(2, 2rem);
+            @include tag();
+        }
+    }
+
+    &_nombre{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &_descripcion{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    &_acciones{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &_crud{
+        &_contenedor{
+            @include contenedor_md;
+        }
+    }
+}

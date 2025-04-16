@@ -61,6 +61,12 @@ $router->post('/dashboard/fincas/lotes/eliminar', [LotesController::class, 'elim
 //TODO lo de cultivos
 $router->get('/dashboard/fincas/cultivos/index', [CultivosController::class, 'index']);
 $router->post('/dashboard/fincas/cultivos/index', [CultivosController::class, 'index']);
+$router->get('/dashboard/fincas/cultivos/crear', [CultivosController::class, 'crear']);
+$router->post('/dashboard/fincas/cultivos/crear', [CultivosController::class, 'crear']);
+$router->get('/dashboard/fincas/cultivos/editar', [CultivosController::class, 'editar']);
+$router->post('/dashboard/fincas/cultivos/editar', [CultivosController::class, 'editar']);
+$router->post('/dashboard/fincas/cultivos/eliminar', [CultivosController::class, 'eliminar']);
+
 
 //TODO lo de animales
 $router->get('/dashboard/fincas/animales/index', [AnimalesController::class, 'index']);

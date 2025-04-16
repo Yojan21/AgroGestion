@@ -118,8 +118,6 @@ class LotesController{
             }
         }
 
-        
-
         $alertas = Lote::getAlertas();
         $router->render('dashboard/fincas/lotes/editar', [
             'titulo' =>  'Editar' . $lote->nombre,

@@ -2,6 +2,6 @@
 @use 'base/mixins' as m;
 @use "sass:color"; 
 
-.lotes{
+.cultivos{
     @include m.orden;
 }

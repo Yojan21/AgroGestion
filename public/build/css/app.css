@@ -1476,4 +1476,52 @@ h3 {
   width: min(95%, 80rem);
   margin: 0 auto;
 }
+
+.cultivos_contenedor {
+  width: min(95%, 80rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.cultivos_contenedor-contenido {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: rgb(186.3723849372, 194.2719665272, 205.6276150628);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .cultivos_contenedor-contenido {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.cultivos_contenedor-contenido:hover {
+  background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
+}
+.cultivos_nombre {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.cultivos_descripcion {
+  font-size: 1.8rem;
+  text-align: left;
+}
+.cultivos_acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cultivos_crud_contenedor {
+  width: min(95%, 80rem);
+  margin: 0 auto;
+}
 /*# sourceMappingURL=app.css.map */
