@@ -3,42 +3,30 @@
 namespace Model;
 
 class Animal extends ActiveRecord {
-    protected static $tabla = 'lotes';
-    protected static $columnasDB = ['id', 'nombre', 'descripcion', 'cantidad', 'fecha','usuario_id', 'finca_id', 'lote_id'];
+    protected static $tabla = 'animales';
+    protected static $columnasDB = ['id', 'nombre', 'raza','usuario_id', 'finca_id'];
 
     public $id;
     public $nombre;
-    public $descripcion;
-    public $cantidad;
-    public $fecha;
+    public $raza;
     public $finca_id;
     public $usuario_id;
-    public $lote_id;
     
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
-        $this->descripcion = $args['descripcion'] ?? '';
-        $this->cantidad = $args['cantidad'] ?? 0;
-        $this->fecha = $args['fecha'] ?? '';
+        $this->raza = $args['raza'] ?? '';
         $this->usuario_id = $args['usuario_id'] ?? '';
         $this->finca_id = $args['finca_id'] ?? '';
-        $this->lote_id = $args['lote_id'] ?? '';
     }
 
     public function validar() {
         if(!$this->nombre) {
             self::$alertas['error'][] = 'El Nombre es Obligatorio';
         }
-        if(!$this->descripcion) {
-            self::$alertas['error'][] = 'la Descripcion es Obligatoria';
-        }
-        if(!$this->cantidad) {
-            self::$alertas['error'][] = 'la Cantidad es Obligatoria';
-        }
-        if(!$this->fecha) {
-            self::$alertas['error'][] = 'la Fecha es Obligatoria';
+        if(!$this->raza) {
+            self::$alertas['error'][] = 'la Raza es Obligatoria si no aplica escribe "N/A"';
         }
         return self::$alertas;
     }

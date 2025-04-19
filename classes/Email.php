@@ -22,14 +22,15 @@ class Email {
         // create a new object
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = $_ENV['EMAIL_HOST'];
+        $mail->Host = 'smtp.gmail.com';
+        /* $mail->Host = $_ENV['EMAIL_HOST']; */
         $mail->SMTPAuth = true;
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
     
-        $mail->setFrom('cuentas@agrogestion.com');
-        $mail->addAddress($this->email, $this->nombre);
+        $mail->setFrom('cuentas@agrogestion.com', 'AgroGestion');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Set HTML

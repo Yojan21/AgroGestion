@@ -71,6 +71,12 @@ $router->post('/dashboard/fincas/cultivos/eliminar', [CultivosController::class,
 //TODO lo de animales
 $router->get('/dashboard/fincas/animales/index', [AnimalesController::class, 'index']);
 $router->post('/dashboard/fincas/animales/index', [AnimalesController::class, 'index']);
+$router->get('/dashboard/fincas/animales/crear', [AnimalesController::class, 'crear']);
+$router->post('/dashboard/fincas/animales/crear', [AnimalesController::class, 'crear']);
+$router->get('/dashboard/fincas/animales/editar', [AnimalesController::class, 'editar']);
+$router->post('/dashboard/fincas/animales/editar', [AnimalesController::class, 'editar']);
+$router->post('/dashboard/fincas/animales/eliminar', [AnimalesController::class, 'eliminar']);
+
 
 //TODO lo relacionado con empleados
 $router->get('/dashboard/empleados/index', [EmpleadosController::class, 'index']);
