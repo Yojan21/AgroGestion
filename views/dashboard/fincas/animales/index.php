@@ -21,7 +21,14 @@ $descripcion = 'Vista para la seccion del cafe de la finca seleccionada';
         </div>
 
         <div class="animales_contenedor">
-            <?php foreach ($animales as $animal): ?>
+            <?php if(empty($animales)){ ?>
+
+                <div class="animales_vacio">
+                    <h3 class="animales_vacio-texto">Aún no se han creado animales, crea uno para verlo aqui</h3>
+                </div>
+
+        
+            <?php }else{ foreach ($animales as $animal): ?>
                 <div class="animales_contenedor-contenido">
                     <div class="animales_item">
                         <h4 class="animales_nombre"><?php echo $animal->nombre; ?></h4>
@@ -44,7 +51,7 @@ $descripcion = 'Vista para la seccion del cafe de la finca seleccionada';
                         </form>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endforeach; } ?>
         </div>
     </div>
 

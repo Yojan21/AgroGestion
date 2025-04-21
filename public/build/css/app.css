@@ -1204,6 +1204,7 @@ h3 {
 }
 .tarjetas_tarjeta {
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .tarjetas_tarjeta:hover {
@@ -1459,6 +1460,15 @@ h3 {
 .lotes_contenedor-contenido:hover {
   background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
 }
+.lotes_vacio {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.lotes_vacio-texto {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 2rem;
+}
 .lotes_nombre {
   font-size: 2rem;
   text-transform: uppercase;
@@ -1507,6 +1517,15 @@ h3 {
 .cultivos_contenedor-contenido:hover {
   background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
 }
+.cultivos_vacio {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.cultivos_vacio-texto {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 2rem;
+}
 .cultivos_nombre {
   font-size: 2rem;
   text-transform: uppercase;
@@ -1554,6 +1573,15 @@ h3 {
 }
 .animales_contenedor-contenido:hover {
   background-color: rgb(156.7112970711, 168.0251046025, 184.2887029289);
+}
+.animales_vacio {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.animales_vacio-texto {
+  font-weight: 400;
+  color: #64748B;
+  font-size: 2rem;
 }
 .animales_nombre {
   font-size: 2rem;

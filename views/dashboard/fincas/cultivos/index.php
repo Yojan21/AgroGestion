@@ -22,7 +22,12 @@ $descripcion = 'Vista para la seccion del cafe de la finca seleccionada';
         </div>
 
         <div class="cultivos_contenedor">
-            <?php foreach ($cultivos as $cultivo): ?>
+            <?php if(empty($cultivos)){ ?>
+
+            <div class="cultivos_vacio">
+                <h3 class="cultivos_vacio-texto">Aún no se han creado cultivos, crea uno para verlo aqui</h3>
+            </div>
+            <?php } else { foreach ($cultivos as $cultivo): ?>
                     <div class="cultivos_contenedor-contenido">
                         <div class="cultivos_item">
                             <h4 class="cultivos_nombre"><?php echo $cultivo->nombre; ?></h4>
@@ -46,7 +51,7 @@ $descripcion = 'Vista para la seccion del cafe de la finca seleccionada';
                             </form>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php endforeach; }?>
         </div>
 
     </div>

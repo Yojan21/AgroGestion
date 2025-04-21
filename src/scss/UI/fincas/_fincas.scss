@@ -38,6 +38,7 @@
 
     &_tarjeta{
         padding: 1rem;
+        margin-bottom: 2rem;
 
         @include m.tablet{
             &:hover{

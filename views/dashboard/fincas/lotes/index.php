@@ -23,8 +23,13 @@ $descripcion = 'Vista para la seccion de los lostes de la finca seleccionada';
         
 
         <div class="lotes_contenedor">
+        <?php if(empty($lotes)){ ?>
 
-            <?php foreach ($lotes as $lote): ?>
+        <div class="lotes_vacio">
+            <h3 class="lotes_vacio-texto">Aún no se han creado lotes, crea uno para verlo aqui</h3>
+        </div>
+
+            <?php } else { foreach ($lotes as $lote): ?>
                 <div class="lotes_contenedor-contenido">
                     <div class="lotes_item">
                         <h4 class="lotes_nombre"><?php echo $lote->nombre; ?></h4>
@@ -46,7 +51,7 @@ $descripcion = 'Vista para la seccion de los lostes de la finca seleccionada';
                         </form>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endforeach; }?>
         </div>
     </div>
 
