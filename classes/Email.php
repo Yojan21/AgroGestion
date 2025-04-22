@@ -22,8 +22,7 @@ class Email {
         // create a new object
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        /* $mail->Host = $_ENV['EMAIL_HOST']; */
+        $mail->Host = $_ENV['EMAIL_HOST'];
         $mail->SMTPAuth = true;
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
@@ -76,6 +75,36 @@ class Email {
         $mail->Body = $contenido;
 
         //Enviar el mail
+        $mail->send();
+    }
+
+    public function enviarContacto() {
+
+        // create a new object
+        $mail = new PHPMailer();
+        $mail->isSMTP();
+        $mail->Host = $_ENV['EMAIL_HOST'];
+        $mail->SMTPAuth = true;
+        $mail->Port = $_ENV['EMAIL_PORT'];
+        $mail->Username = $_ENV['EMAIL_USER'];
+        $mail->Password = $_ENV['EMAIL_PASS'];
+    
+        $mail->setFrom('cuentas@agrogestion.com', 'AgroGestion');
+        $mail->addAddress($this->email);
+        $mail->Subject = 'Usuario en contacto';
+
+        // Set HTML
+        $mail->isHTML(TRUE);
+        $mail->CharSet = 'UTF-8';
+
+        $contenido = '<html>';
+        $contenido .= "<p><strong>Hola, " . $this->nombre .  "</strong> ha escrito un mensaje.</p>";
+        $contenido .= "<p>Su mensaje es: " . $this->token;        
+        $contenido .= "<p>Responde en el menor tiempo posible: <a href='mailto:" . $this->email . "'>Responder ahora</a>";    
+        $contenido .= '</html>';
+
+        $mail->Body = $contenido;
+
         $mail->send();
     }
 }

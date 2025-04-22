@@ -3,6 +3,8 @@
 namespace Controllers;
 
 use MVC\Router;
+use Classes\Email;
+use Model\Usuario;
 
 class PaginasController {
     public static function index(Router $router) {
@@ -25,10 +27,31 @@ class PaginasController {
 
     public static function contacto(Router $router) {
 
+        $alertas = [];
+        
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            
+            if(empty($_POST['nombre']) || empty($_POST['apellido']) || empty($_POST['telefono']) || empty($_POST['mensaje'])) {
+                Usuario::setAlerta('error', 'Todos los campos son obligatorios');
+            }
+            $alertas = Usuario::getAlertas();
+            if(empty($alertas)){
+                // Enviar el email
 
+                $nombre = $_POST['nombre'] . ' ' . $_POST['apellido'];
+                $telefono = $_POST['telefono'];
+                $mensaje = $_POST['mensaje'];
+                $correo = $_POST['email'];
+                $email = new Email($nombre, $correo, $mensaje);
+
+                $email->enviarContacto();
+            }
+        }
+        
         // Render a la vista 
         $router->render('paginas/contacto', [
             'titulo' => 'Contacto',
+            'alertas' => $alertas
         ]);
     }
 

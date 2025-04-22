@@ -17,6 +17,7 @@ $router = new Router();
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->post('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/planes', [PaginasController::class, 'planes']);
 $router->post('/planes', [PaginasController::class, 'planes']);
 $router->get('/terminos', [PaginasController::class, 'terminos']);

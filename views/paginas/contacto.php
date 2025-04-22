@@ -6,10 +6,10 @@ $descripcion = 'Vista de información para contacto';
 
     <h2 class="contacto_heading">Contáctanos</h2>
     <p class="contacto_descripcion">Completa los siguientes campos y nos pondremos en contacto contigo en el menor tiempo posible.</p>
-    <form action="/paginas/contacto" class="formulario" method="POST">
 
-    <fieldset class="formulario_fieldset">
-        <legend>Información personal</legend>
+    <?php include __DIR__ . '/../templates/alertas.php'; ?>
+    <form action="/contacto" class="formulario" method="POST">
+
         <div class="formulario_campo">
             <label class="formulario_label" for="nombre">Nombre</label>
             <input 
@@ -28,6 +28,16 @@ $descripcion = 'Vista de información para contacto';
                 id="apellido" 
                 name="apellido" 
                 placeholder="Apellido">
+        </div>
+
+        <div class="formulario_campo">
+            <label class="formulario_label" for="email">Email</label>
+            <input 
+                class="formulario_input"
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Email">
         </div>
 
         <div class="formulario_campo">
@@ -50,7 +60,5 @@ $descripcion = 'Vista de información para contacto';
         </div>
 
         <input type="submit" class="formulario_submit" value="Enviar Mensaje">
-    </fieldset>
-
     </form>
 </main>
